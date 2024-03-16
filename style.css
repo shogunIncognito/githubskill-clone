@@ -32,7 +32,7 @@ body {
 }
 
 .header {
-    height: 300px;
+    height: 320px;
     padding: 20px 16%;
     gap: 1rem;
     display: flex;
@@ -66,24 +66,24 @@ body {
     width: 70%;
     margin: 0 auto;
     margin-top: 7rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .cards-container {
     width: 100%;
-    /* display: grid; */
-    /* grid-template-columns: repeat(3, 1fr); */
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     margin: 40px 0;
-    gap: 20px;
+    gap: 10px;
 }
 
 .card {
-    width: 350px;
     height: 80px;
     padding: 15px;
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 7px;
+    width: 90%;
 }
 
 .link {
@@ -144,4 +144,30 @@ a:hover {
 .skills-link:hover {
     color: blue;    
     text-decoration: none;
+}
+
+@media (max-width: 1224px) {
+    .main {
+        width: 90%;        
+    }
+
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+} 
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 10%;
+        height: auto;
+    }
+
+    .cards-container {
+        gap: 10px;
+        grid-template-columns: repeat(1, 1fr);
+    }    
+
+    .header-container {
+        flex-direction: column;
+    }
 }
