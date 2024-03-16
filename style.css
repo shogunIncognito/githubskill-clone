@@ -5,6 +5,7 @@
 
 :root {
     --bg-color: #f6f8fa;
+    --border-color: #e1e4e8;    
 }
 
 body {
@@ -51,15 +52,30 @@ body {
     justify-content: start;
     align-items: start;
     gap: 10px;
+    flex: 1;
 }
 
+.github-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+
 .button {
-    background-color: green;
-    border: 1px solid black;
+    background-color: rgba(0, 128, 0, 0.842);
+    border: 1px solid var(--bg-color);
+    transition: background-color 0.2s;
+    font-weight: bold;
     padding: 14px;
     margin-top: 5px;
     color: white;
     border-radius: 7px;
+}
+
+.button:hover {
+    background-color: rgba(0, 128, 0, 0.932);
 }
 
 .main {
@@ -75,13 +91,14 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     margin: 40px 0;
+    margin-top: 20px;
     gap: 10px;
 }
 
 .card {
     height: 80px;
     padding: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 1px solid var(--border-color);
     border-radius: 7px;
     width: 90%;
 }
@@ -94,8 +111,8 @@ body {
 }
 
 .ad-course {
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 16px;
+    border: 1px solid var(--border-color);
+    padding: 26px;
     border-radius: 7px;
     display: flex;
     justify-content: space-between;
@@ -109,19 +126,27 @@ body {
 }
 
 .ad-course button {
-    border: 1px solid rgba(0, 0, 0, 0.15);
-    padding: 10px;
+    border: 1px solid var(--border-color);
+    padding: 14px;
+    transition: background-color 0.2s;
     border-radius: 7px;
     background-color: var(--bg-color);
     color: black;
 }
 
+.ad-course button:hover {
+    background-color: #f0f0f0;
+}
+
 footer {
     margin-top: 4rem;
-    padding: 20px;
-    border-top: 1px solid rgba(0, 0, 0, 0.15);
     display: flex;
-    gap: 1rem;
+    justify-content: start;
+    padding: 30px 20px;
+    flex-wrap: wrap;
+    border-top: 1px solid var(--border-color);
+    display: flex;
+    gap: 0.4rem 1rem;
 }
 
 footer a {
@@ -147,6 +172,10 @@ a:hover {
 }
 
 @media (max-width: 1224px) {
+    .header {
+        padding: 20px;        
+    }
+
     .main {
         width: 90%;        
     }
@@ -158,7 +187,7 @@ a:hover {
 
 @media (max-width: 768px) {
     .header {
-        padding: 20px 10%;
+        padding: 20px;
         height: auto;
     }
 
@@ -169,5 +198,18 @@ a:hover {
 
     .header-container {
         flex-direction: column;
+        height: 450px;
+        margin-bottom: 50px;
+    }
+
+    .github-image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .github-image img {
+        margin-top: 60px;
+        width: 330px;
     }
 }
