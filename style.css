@@ -215,5 +215,6 @@ a:hover {
 
     .ad-course {
         flex-direction: column;
+        gap: 1rem;
     }
 }
