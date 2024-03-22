@@ -212,4 +212,8 @@ a:hover {
         margin-top: 60px;
         width: 330px;
     }
+
+    .ad-course {
+        flex-direction: column;
+    }
 }
